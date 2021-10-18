@@ -1,0 +1,17 @@
+h1
+{
+font-family: sans-serif;
+color: red;
+}
+
+.h1
+{
+    font-size: 20px;
+    color: sienna;
+}
+
+#h1
+{
+font-size: 15px;
+color: skyblue;
+}
