@@ -1,0 +1,54 @@
+*
+{
+    font-family: sans-serif;
+}
+
+h1
+{
+font-family: sans-serif;
+color: red;
+}
+
+a
+{
+color: blueviolet;
+text-decoration: none;
+font-size: large;
+/* transition: color 1s; */
+transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+a:visited
+{
+    color: gray;
+}
+
+a:hover
+{
+    text-decoration: underline;
+    color: deepskyblue;
+}
+
+.obraz
+{
+    width: 500px;
+    border-radius: 25px;
+}
+
+#obramowanie
+{
+    display: inline-block;
+}
+
+#podpis
+{
+    font-size: 200%;
+    text-align: center;
+}
+
+body
+{
+    background-image: url(images/1836361.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
