@@ -137,6 +137,7 @@ a:hover
     color: blue;
     font-size: 130%;
     cursor: pointer;
+    transform: translate(100px) rotate(5deg) skewX(-20deg);
 }
 
 #title::after
@@ -144,15 +145,18 @@ a:hover
     content: '';
     display: block;
     height: 5px;
-    width: 0px;
+    width: 450px;
     background-color: blue;
     position: absolute;
     bottom: 10px;
-    left: 50%;
-    transform:  translateX(-50%);
+    left: calc(50% - 225px);
+    transition: all 1s ease-out;
+    transform: scaleX(0);
+    transform-origin: left;
 }
 
 #title:hover::after
 {
-    width: 450px;
+    /* width: 450px; */
+    transform: scaleX(1);
 }
