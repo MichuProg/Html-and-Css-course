@@ -26,6 +26,7 @@ body{
     max-width: 1200px;
     max-height: 80vh;
     display: flex;
+    flex-wrap: wrap;
     padding: 32px 92px;
     background: linear-gradient(to right top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
     border-radius: 20px;
@@ -70,9 +71,11 @@ h1{
     font-size: 48px;
 } 
 
-p{
+p{  
+    padding-bottom: 12px;
     font-size: 20px;
     font-weight: 400;
+    line-height: 32px;
 }
 
 a{
@@ -103,6 +106,88 @@ a:hover:after {
 
 .logo img{
     width: 100%;
+}
+
+main{
+    display: flex;
+}
+
+section:first-child {
+    margin-right: 32px;
+}
+
+.people{
+    height: 100%;
+    padding-bottom: 24px;
+    display: flex;
+}
+
+.person__img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    background: var(--green);
+    border: solid 3px #fff;
+    border-radius: 100%;
+}
+
+.person__img img {
+    width: 100%;
+}
+
+.person__name {
+    display: block;
+    margin-top:  32px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    background: linear-gradient(90deg, var(--green), rgba(255, 255, 255, 0.8));
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.person:last-child{
+    align-self: flex-end;
+}
+
+.person__img--filip img {
+    transform: translate(10px, -30px);
+}
+
+button{
+    padding: 16px 0;
+    margin-top: 32px;
+    width: 350px;
+    position: relative;
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--green);
+    background: linear-gradient(to right top, var(--green), rgba(255, 255, 255 , 0.6));
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+button:focus {
+    outline-color: #fff;
+}
+
+button::after {
+    content: "";
+    width: 50px;
+    height: 150%;
+    position: absolute;
+    left: -100px;
+    top: -25px;
+    background-color: rgba(255, 255, 255 , 0.4);
+    transform:rotate(20deg);
+    transition: transform 0.3s;
+}
+
+button:hover:after {
+    transform: translateX(500px) rotate(20deg);
 }
 
 @keyframes slideDown {
