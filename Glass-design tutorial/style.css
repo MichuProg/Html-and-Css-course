@@ -36,6 +36,25 @@ body{
     overflow: auto;
 }
 
+.container::-webkit-scrollbar {
+    width: 20px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(180deg, var(--green), rgba(255, 255, 255 , 0.6));
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb:hover{
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
 .bg_img{
     position: absolute;
 }
@@ -144,6 +163,7 @@ section:first-child {
     background: linear-gradient(90deg, var(--green), rgba(255, 255, 255, 0.8));
     color: #fff;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -163,7 +183,6 @@ button{
     font-size: 42px;
     font-weight: 700;
     color: #fff;
-    background: var(--green);
     background: linear-gradient(to right top, var(--green), rgba(255, 255, 255 , 0.6));
     border: none;
     cursor: pointer;
