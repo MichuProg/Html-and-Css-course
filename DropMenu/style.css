@@ -19,10 +19,16 @@ body {
     font-weight: 700;
 }
 
+header {
+    top: 0;
+    position: sticky;
+    z-index: 1;
+}
+
 .Menu_bar ul {
     display: inline-flex;
     /* dodac background bo kolory przy minimalizowaniu se nie zgadzaja */
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     list-style: none;
     color: #fff;
 }
@@ -96,3 +102,14 @@ body {
     margin-top: -40px;
     margin-left: 140px;
 }
+
+/* footer{
+    width: 400px;
+    height: 600px;
+    border: 2px solid blanchedalmond;
+}
+
+p {
+    font-size: 30px;
+    color: #fff;
+} */
