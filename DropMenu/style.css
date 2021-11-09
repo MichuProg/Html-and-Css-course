@@ -15,7 +15,8 @@ body {
 .Menu_bar{
     background: rgb(179, 51, 112);
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .Menu_bar ul {
@@ -30,4 +31,68 @@ body {
     width: 120px;
     margin: 15px;
     padding: 15px;
+}
+
+.Menu_bar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.active, .Menu_bar ul li:hover {
+    background-color: violet;
+    border-radius: 4px;
+}
+
+.Menu_bar .bi {
+    margin-right: 5px;
+}
+
+.sub_menu1 {
+    display: none;
+}
+
+.Menu_bar ul li:hover .sub_menu1 {
+    display: block;
+    position: absolute;
+    background: rgb(179, 51, 112);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.Menu_bar ul li:hover .sub_menu1 ul{
+    display: block;
+    margin: 10px;
+}
+
+.Menu_bar ul li:hover .sub_menu1 ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    border-radius: 0px;
+    text-align: left;
+}
+
+.Menu_bar ul li:hover .sub_menu1 ul li:last-child {
+    border-bottom: none;
+}
+
+.Menu_bar ul li:hover .sub_menu1 ul li a:hover {
+    color: pink;
+}
+
+.bi-arrow-right-square-fill {
+    float: right;
+}
+
+.sub_menu2 {
+    display: none;
+}
+
+.Menu_bar ul li .hover_me:hover .sub_menu2 {
+    display: block;
+    position: absolute;
+    background: rgb(179, 51, 112);
+    margin-top: -40px;
+    margin-left: 140px;
 }
