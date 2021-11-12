@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="PL-pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +10,45 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Responsive sidebar</title>
 </head>
+
 <body>
     <div class="sidebar">
         <div class="logo-details">
             <i class='bx bxl-google-plus-circle'></i>
             <span class="logo-name">CodingLab</span>
         </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link-name">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <div class="icon-links">
+                    <a href="#">
+                        <i class='bx bx-collection'></i>
+                        <span class="link-name">Category</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Login Form</a></li>
+                    <li><a href="#">Card Design</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-links">
+                    <a href="#">
+                        <i class='bx bx-book-bookmark'></i>
+                        <span class="link-name">Posts</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+            </li>
+        </ul>
     </div>
 </body>
+
 </html>
