@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="sidebar">
+    <div class="sidebar close">
         <div class="logo-details">
             <i class='bx bxl-google-plus-circle'></i>
             <span class="logo-name">CodingLab</span>
@@ -23,6 +23,9 @@
                     <i class='bx bx-grid-alt'></i>
                     <span class="link-name">Dashboard</span>
                 </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="#">Category</a></li>
+                </ul>
             </li>
             <li>
                 <div class="icon-links">
@@ -33,9 +36,10 @@
                     <i class='bx bx-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Login Form</a></li>
-                    <li><a href="#">Card Design</a></li>
+                    <li><a class="link-name" href="#">Category</a></li>
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">PHP & MySQL</a></li>
                 </ul>
             </li>
             <li>
@@ -46,9 +50,97 @@
                     </a>
                     <i class='bx bx-chevron-down arrow'></i>
                 </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="#">Posts</a></li>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Login Form</a></li>
+                    <li><a href="#">Card Design</a></li>
+                </ul>
             </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-pie-chart-alt-2'></i>
+                    <span class="link-name">Analitycs</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="#">Analitycs</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-line-chart'></i>
+                    <span class="link-name">Chart</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="#">Chart</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-links">
+                    <a href="#">
+                        <i class='bx bx-plug'></i>
+                        <span class="link-name">Plugins</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="#">Plugins</a></li>
+                    <li><a href="#">UI Face</a></li>
+                    <li><a href="#">Pigments</a></li>
+                    <li><a href="#">Box Icons</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-compass'></i>
+                    <span class="link-name">Explore</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="#">Explore</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-history'></i>
+                    <span class="link-name">History</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="#">History</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="link-name">Setting</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="#">Setting</a></li>
+                </ul>
+            </li>
+            <li>
+            <div class="profile-details">
+                <div class="profile-content">
+                    <img src="images/profile-image.jpg" alt="profile">
+                </div>
+                    <div class="name-job">
+                        <div class="profile-name">Michal Dziedzic</div>
+                        <div class="job">Web Designer</div>
+                    </div>
+                    <i class='bx bx-log-out' ></i>   
+                </div>
+            </li> 
         </ul>
     </div>
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        for(let i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener('click', (e)=>{
+                let arrowParent = e.target.parentElement.parentElement;
+                arrowParent.classList.toggle("showMenu");
+                console.log(arrowParent);
+            });
+        }
+    </script>
 </body>
 
 </html>
