@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="sidebar close">
+    <div class="sidebar">
         <div class="logo-details">
             <i class='bx bxl-google-plus-circle'></i>
             <span class="logo-name">CodingLab</span>
@@ -131,15 +131,27 @@
             </li> 
         </ul>
     </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text">Drop down sidebar</span>
+        </div>
+    </section>
     <script>
         let arrow = document.querySelectorAll(".arrow");
         for(let i = 0; i < arrow.length; i++) {
             arrow[i].addEventListener('click', (e)=>{
                 let arrowParent = e.target.parentElement.parentElement;
                 arrowParent.classList.toggle("showMenu");
-                console.log(arrowParent);
             });
         }
+
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebar);
+        sidebarBtn.addEventListener('click', ()=>{
+            sidebar.classList.toggle("close");
+        })
     </script>
 </body>
 
