@@ -6,17 +6,30 @@
 }
 
 header nav {
-    position: absolute;
+    position: relative;
+    left: 0px;
+    top: 0px;
 }
 
 header nav ul {
     height: 177px;
     width: 100vw;
-    padding-top: 25px;
-    display: inline-flex;
+    padding: 25px 0px 0px 0px;
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    /* background-color: aquamarine; */
+}
+
+header nav ul a.mobile-menu {
+    display: none;
+}
+
+header.mobile nav ul {
+    display: flex;
+    flex-direction: column;
+    height: 375px;
+    padding: 0;
+    align-items: flex-start;
 }
 
 header nav ul li {
@@ -34,10 +47,22 @@ header nav ul li a {
     transition: all 0.3s linear;
 }
 
+header.mobile nav ul li a {
+    font-size: 20px;
+    padding: 0px 5px;
+} 
+
 header nav ul li ul.sub-nav {
     position: absolute;
     display: none;
-    width: 210px;  
+    width: 210px;
+}
+
+header.mobile nav ul li ul.sub-nav {
+    position: absolute;
+    display: none;
+    width: 210px;
+    display: none;
 }
 
 header nav ul li a:hover {
@@ -56,9 +81,10 @@ header nav ul li:hover .sub-nav li {
     padding: 0px 0px 5px 20px;
 }
 
+
 a.nav-link {
     padding: 5px 3px;
-    text-decoration: none;    
+    text-decoration: none;
     position: relative;
     z-index: 1;
 }
@@ -83,4 +109,40 @@ a.nav-link:hover:after {
     width: 100%;
 }
 
+@media (max-width: 1000px) {
+    /*  wyswietlenie menu flex column
+        header nav ul {
+        height: 250px;
+        width: 300px;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding: 5px 0 5px 5px;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: aquamarine;
+    }
 
+    header nav ul li.logo {
+        display: none;
+    }
+
+    header nav ul li:hover .sub-nav {
+        display: none;
+    } */
+
+    header nav ul {
+        padding: 10px 0 10px 20px;
+        height: 70px;
+        justify-content: flex-start;
+        border-bottom: 2px solid #000;
+    }
+    
+    header nav ul li {
+        display: none;
+    }
+
+    header nav ul a.mobile-menu {
+        display: inline;
+    }
+    
+}
