@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header nav {
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+header nav ul {
+    height: 177px;
+    width: 100vw;
+    padding: 25px 0px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul a.mobile-menu {
+    display: none;
+}
+
+header.mobile nav ul {
+    display: flex;
+    flex-direction: column;
+    height: 375px;
+    padding: 0;
+    align-items: flex-start;
+}
+
+header nav ul li {
+    list-style: none;
+    /* width: 210px; */
+    /* border: 2px solid black;
+    border-radius: 6px; */
+    text-align: center;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(40, 40, 40);
+    transition: all 0.3s linear;
+}
+
+header.mobile nav ul li a {
+    font-size: 20px;
+    padding: 0px 5px;
+} 
+
+header nav ul li ul.sub-nav {
+    position: absolute;
+    display: none;
+    width: 210px;
+}
+
+header.mobile nav ul li ul.sub-nav {
+    position: absolute;
+    display: none;
+    width: 210px;
+    display: none;
+}
+
+header nav ul li a:hover {
+    color: #000;
+}
+
+header nav ul li:hover .sub-nav {
+    display: block;
+    padding: 0px;
+    height: 125px;
+    padding-top: 10px;
+}
+
+header nav ul li:hover .sub-nav li {
+    text-align: left;
+    padding: 0px 0px 5px 20px;
+}
+
+
+a.nav-link {
+    padding: 5px 3px;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+}
+
+a.active {
+    background: rgba(125, 255, 22, 255);
+    border-radius: 5px;
+}
+
+a.nav-link:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background: linear-gradient(90deg, transparent, #000);
+    transition: width 0.5s;
+}
+
+a.nav-link:hover:after {
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    /*  wyswietlenie menu flex column
+        header nav ul {
+        height: 250px;
+        width: 300px;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding: 5px 0 5px 5px;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: aquamarine;
+    }
+
+    header nav ul li.logo {
+        display: none;
+    }
+
+    header nav ul li:hover .sub-nav {
+        display: none;
+    } */
+
+    header nav ul {
+        padding: 10px 0 10px 20px;
+        height: 70px;
+        justify-content: flex-start;
+        border-bottom: 2px solid #000;
+    }
+    
+    header nav ul li {
+        display: none;
+    }
+
+    header nav ul a.mobile-menu {
+        display: inline;
+    }
+    
+}
