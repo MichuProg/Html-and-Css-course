@@ -5,14 +5,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body {
-    overflow-x: hidden;
-}
-
 header nav {
     position: relative;
     left: 0px;
     top: 0px;
+    display: flex;
 }
 
 header nav ul {
@@ -22,6 +19,10 @@ header nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+header nav ul.center-menu {
+    width: 150px;
 }
 
 header nav ul a.mobile-menu {
@@ -36,13 +37,14 @@ header.mobile nav ul {
     align-items: flex-start;
 }
 
-li.logo img{
-vertical-align: middle;
-}
 header nav ul li {
     list-style: none;
     text-align: center;
 }
+
+li.logo img{
+    vertical-align: middle;
+    }
 
 header nav ul li a {
     text-decoration: none;  
@@ -65,7 +67,6 @@ header nav ul li ul.sub-nav {
 
 header.mobile nav ul li ul.sub-nav {
     position: absolute;
-    display: none;
     width: 210px;
     display: none;
 }
@@ -89,11 +90,19 @@ header nav ul li:hover .sub-nav li {
 header nav ul.social-media {
     padding: 0;
     height: 152px;
+    width: 120px;
 }
 
 header nav ul li ul.social-media img {
     vertical-align: middle;
     max-width: 60%;
+    opacity: 0.9;
+    transition: 0.3s ease;
+}
+
+header nav ul li ul.social-media img:hover {
+    opacity: 1;
+    max-width: 80%;
 }
 
 a.nav-link {
@@ -151,13 +160,30 @@ a.nav-link:hover:after {
         justify-content: flex-start;
         border-bottom: 2px solid #000;
     }
+
+    header nav ul.social-media{
+        height: 70px;
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: none;
+    }
+
+    header nav ul.right-menu {
+        justify-content: flex-end;
+    }
     
-    header nav ul li {
+    header nav ul li a.nav-link,
+    ul.center-menu{
         display: none;
     }
 
     header nav ul a.mobile-menu {
         display: inline;
+    }
+
+    header nav ul li ul.social-media img:hover {
+        max-width: 60%;
     }
     
 }
@@ -165,10 +191,10 @@ a.nav-link:hover:after {
 main section {
     width: 100%;
     display: flex;
-    justify-content: left;
+    justify-content: center;
 }
 
 main section img {
-    max-width: 50%;
+    max-width: 100%;
     max-height: 100%;
 }
