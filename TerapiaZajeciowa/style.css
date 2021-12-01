@@ -29,14 +29,6 @@ header nav ul a.mobile-menu {
     display: none;
 }
 
-header.mobile nav ul {
-    display: flex;
-    flex-direction: column;
-    height: 375px;
-    padding: 0;
-    align-items: flex-start;
-}
-
 header nav ul li {
     list-style: none;
     text-align: center;
@@ -44,17 +36,12 @@ header nav ul li {
 
 li.logo img{
     vertical-align: middle;
-    }
+}
 
 header nav ul li a {
     text-decoration: none;  
     color: rgb(40, 40, 40);
     transition: all 0.3s linear;
-}
-
-header.mobile nav ul li a {
-    font-size: 10px;
-    padding: 0px 5px;
 } 
 
 header nav ul li ul.sub-nav {
@@ -63,12 +50,6 @@ header nav ul li ul.sub-nav {
     width: 175px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 0px 0px 10px 10px;
-}
-
-header.mobile nav ul li ul.sub-nav {
-    position: absolute;
-    width: 210px;
-    display: none;
 }
 
 header nav ul li a:hover {
@@ -134,25 +115,6 @@ a.nav-link:hover:after {
 }
 
 @media (max-width: 1000px) {
-    /*  wyswietlenie menu flex column
-        header nav ul {
-        height: 250px;
-        width: 300px;
-        padding-top: 5px;
-        padding-left: 5px;
-        padding: 5px 0 5px 5px;
-        flex-direction: column;
-        align-items: flex-start;
-        background-color: aquamarine;
-    }
-
-    header nav ul li.logo {
-        display: none;
-    }
-
-    header nav ul li:hover .sub-nav {
-        display: none;
-    } */
 
     header nav ul {
         padding: 10px 0 10px 20px;
@@ -178,14 +140,71 @@ a.nav-link:hover:after {
         display: none;
     }
 
-    header nav ul a.mobile-menu {
+    header.open nav{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header.open nav ul.left-menu,
+    header.open nav ul.right-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        height: max-content;
+        padding-bottom: 0px;
+    }
+
+    header.open nav ul.right-menu{
+        padding-top: 0px;
+    }
+
+    header.open nav ul.left-menu{
+        border-bottom: none;
+    }
+
+    header.open nav ul li{
+        margin-bottom: 10px;
+    }
+
+    header.open nav ul li:hover .sub-nav {
+        display: none;
+    }
+
+    header.open nav ul li a {
+        font-size: 15px;
+        font-weight: 600;
+        padding: 0px 5px;
+    }
+
+    header.open nav ul li a.nav-link {
         display: inline;
+    }
+
+    header nav ul a.mobile-menu {
+        display: block;
     }
 
     header nav ul li ul.social-media img:hover {
         max-width: 60%;
     }
     
+    a.active {
+        background: #fff;
+        border-radius: none;
+    }
+
+    a.nav-link:after {
+        content: none;
+        width: 0;
+        height: 2px;
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        background: linear-gradient(90deg, transparent, #000);
+        transition: none;
+    }
 }
 
 main section {
