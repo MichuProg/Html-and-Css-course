@@ -9,60 +9,47 @@ header nav {
     position: relative;
     left: 0px;
     top: 0px;
+    display: flex;
 }
 
 header nav ul {
     height: 177px;
-    width: 100vw;
+    width: 100%;
     padding: 25px 0px 0px 0px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+header nav ul.center-menu {
+    width: 150px;
+}
+
 header nav ul a.mobile-menu {
     display: none;
 }
 
-header.mobile nav ul {
-    display: flex;
-    flex-direction: column;
-    height: 375px;
-    padding: 0;
-    align-items: flex-start;
-}
-
 header nav ul li {
     list-style: none;
-    /* width: 210px; */
-    /* border: 2px solid black;
-    border-radius: 6px; */
     text-align: center;
 }
 
-header nav ul li a {
-    text-decoration: none;
-    font-size: 25px;
-    color: rgb(40, 40, 40);
-    transition: all 0.3s linear;
+li.logo img{
+    vertical-align: middle;
 }
 
-header.mobile nav ul li a {
-    font-size: 20px;
-    padding: 0px 5px;
+header nav ul li a {
+    text-decoration: none;  
+    color: rgb(40, 40, 40);
+    transition: all 0.3s linear;
 } 
 
 header nav ul li ul.sub-nav {
     position: absolute;
     display: none;
-    width: 210px;
-}
-
-header.mobile nav ul li ul.sub-nav {
-    position: absolute;
-    display: none;
-    width: 210px;
-    display: none;
+    width: 175px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 0px 0px 10px 10px;
 }
 
 header nav ul li a:hover {
@@ -81,9 +68,27 @@ header nav ul li:hover .sub-nav li {
     padding: 0px 0px 5px 20px;
 }
 
+header nav ul.social-media {
+    padding: 0;
+    height: 152px;
+    width: 120px;
+}
+
+header nav ul li ul.social-media img {
+    vertical-align: middle;
+    max-width: 60%;
+    opacity: 0.9;
+    transition: 0.3s ease;
+}
+
+header nav ul li ul.social-media img:hover {
+    opacity: 1;
+    max-width: 80%;
+}
 
 a.nav-link {
     padding: 5px 3px;
+    font-size: 25px;
     text-decoration: none;
     position: relative;
     z-index: 1;
@@ -110,25 +115,6 @@ a.nav-link:hover:after {
 }
 
 @media (max-width: 1000px) {
-    /*  wyswietlenie menu flex column
-        header nav ul {
-        height: 250px;
-        width: 300px;
-        padding-top: 5px;
-        padding-left: 5px;
-        padding: 5px 0 5px 5px;
-        flex-direction: column;
-        align-items: flex-start;
-        background-color: aquamarine;
-    }
-
-    header nav ul li.logo {
-        display: none;
-    }
-
-    header nav ul li:hover .sub-nav {
-        display: none;
-    } */
 
     header nav ul {
         padding: 10px 0 10px 20px;
@@ -136,13 +122,98 @@ a.nav-link:hover:after {
         justify-content: flex-start;
         border-bottom: 2px solid #000;
     }
+
+    header nav ul.social-media{
+        height: 70px;
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: none;
+    }
+
+    header nav ul.right-menu {
+        justify-content: flex-end;
+    }
     
-    header nav ul li {
+    header nav ul li a.nav-link,
+    ul.center-menu{
         display: none;
     }
 
-    header nav ul a.mobile-menu {
+    header.open nav{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header.open nav ul.left-menu,
+    header.open nav ul.right-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        height: max-content;
+        padding-bottom: 0px;
+    }
+
+    header.open nav ul.right-menu{
+        padding-top: 0px;
+    }
+
+    header.open nav ul.left-menu{
+        border-bottom: none;
+    }
+
+    header.open nav ul li{
+        margin-bottom: 10px;
+    }
+
+    header.open nav ul li:hover .sub-nav {
+        display: none;
+    }
+
+    header.open nav ul li a {
+        font-size: 15px;
+        font-weight: 600;
+        padding: 0px 5px;
+    }
+
+    header.open nav ul li a.nav-link {
         display: inline;
     }
+
+    header nav ul a.mobile-menu {
+        display: block;
+    }
+
+    header nav ul li ul.social-media img:hover {
+        max-width: 60%;
+    }
     
+    a.active {
+        background: #fff;
+        border-radius: none;
+    }
+
+    a.nav-link:after {
+        content: none;
+        width: 0;
+        height: 2px;
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        background: linear-gradient(90deg, transparent, #000);
+        transition: none;
+    }
+}
+
+main section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main section img {
+    max-width: 100%;
+    max-height: 100%;
 }
