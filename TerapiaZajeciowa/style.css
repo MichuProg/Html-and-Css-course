@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Tahoma ,'Montserrat', sans-serif;
 }
 
 header nav {
@@ -36,6 +36,7 @@ header nav ul li {
 
 li.logo img{
     vertical-align: middle;
+    max-width: 150px;
 }
 
 header nav ul li a {
@@ -47,7 +48,7 @@ header nav ul li a {
 header nav ul li ul.sub-nav {
     position: absolute;
     display: none;
-    width: 175px;
+    width: 300px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 0px 0px 10px 10px;
 }
@@ -59,13 +60,13 @@ header nav ul li a:hover {
 header nav ul li:hover .sub-nav {
     display: block;
     padding: 0px;
-    height: 125px;
+    height: auto;
     padding-top: 10px;
 }
 
 header nav ul li:hover .sub-nav li {
     text-align: left;
-    padding: 0px 0px 5px 20px;
+    padding: 0px 0px 20px 20px;
 }
 
 header nav ul.social-media {
@@ -94,6 +95,10 @@ a.nav-link {
     z-index: 1;
 }
 
+a.sub-link {
+    font-size: 20px;
+}
+
 a.active {
     background: rgba(125, 255, 22, 255);
     border-radius: 5px;
@@ -114,7 +119,7 @@ a.nav-link:hover:after {
     width: 100%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1110px) {
 
     header nav ul {
         padding: 10px 0 10px 20px;
