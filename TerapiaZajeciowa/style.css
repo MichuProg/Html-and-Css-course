@@ -212,13 +212,55 @@ a.nav-link:hover:after {
     }
 }
 
-main section {
+section.main-img {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-main section img {
+section img.picture-below-nav {
     max-width: 100%;
-    max-height: 890px;
 }
+
+.container {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+section.content {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div.left-column {
+    font-size: 25px;
+    padding: 0px 10px 0 0;
+    max-width: 700px;
+}
+
+div.left-column div {
+    margin: 30px 0;
+}
+
+div.left-column p {
+    padding: 15px 0;
+}
+
+h1 {
+    padding: 12px 0;
+}
+
+
+div.right-column {
+    font-size: 20px;
+    width: 300px;
+    border-style:double;
+    border-color: gainsboro;
+    border-width: 1px;
+}
+
+
