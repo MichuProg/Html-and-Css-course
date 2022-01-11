@@ -254,13 +254,46 @@ h1 {
     padding: 12px 0;
 }
 
+h3, h4 {
+    padding: 20px 0 10px 0;
+}
 
 div.right-column {
     font-size: 20px;
     width: 300px;
-    border-style:double;
-    border-color: gainsboro;
-    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+div.right-column div.facebook-box,
+div.right-column div.instagram-box,
+div.right-column div.search-box{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    border: 1px solid gainsboro;
+}
+
+div.facebook-box,
+div.instagram-box {
+    margin: 0 0 20px 0;
+}
+
+div.instagram-box {
+    
+}
+
+ul {
+    list-style: none;
+}
+
+div.search-box {
+   flex-direction: column; 
+}
+
+div.search-box li{
+    padding: 5px 0;
 }
 
 
