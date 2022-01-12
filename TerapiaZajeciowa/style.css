@@ -39,11 +39,15 @@ li.logo img{
     max-width: 150px;
 }
 
-header nav ul li a {
+a {
     text-decoration: none;  
     color: rgb(40, 40, 40);
     transition: all 0.3s linear;
-} 
+}
+
+a:hover {
+    color: #000;
+}
 
 header nav ul li ul.sub-nav {
     position: absolute;
@@ -51,10 +55,6 @@ header nav ul li ul.sub-nav {
     width: 300px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 0px 0px 10px 10px;
-}
-
-header nav ul li a:hover {
-    color: #000;
 }
 
 header nav ul li:hover .sub-nav {
@@ -100,9 +100,29 @@ a.sub-link {
 }
 
 a.active {
-    background: rgba(125, 255, 22, 255);
     border-radius: 5px;
 }
+
+a.active#red {
+    background: crimson;
+}
+
+a.active#blue {
+    background: blue;
+}
+
+a.active#green {
+    background: rgba(125, 255, 22, 255);
+}
+
+a.active#yellow {
+    background: yellow;
+}
+
+a.active#black {
+    background: black;
+    color: white;
+} 
 
 a.nav-link:after {
     content: "";
@@ -251,11 +271,11 @@ div.left-column p {
 }
 
 h1 {
-    padding: 12px 0;
+    padding: 0 0 12px 0;
 }
 
-h3, h4 {
-    padding: 20px 0 10px 0;
+h3, h4, h5 {
+    margin: 5px 0 10px 0;
 }
 
 div.right-column {
@@ -268,9 +288,11 @@ div.right-column {
 
 div.right-column div.facebook-box,
 div.right-column div.instagram-box,
-div.right-column div.search-box{
+div.right-column div.search-box {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     height: 200px;
     border: 1px solid gainsboro;
 }
@@ -280,20 +302,21 @@ div.instagram-box {
     margin: 0 0 20px 0;
 }
 
-div.instagram-box {
-    
+div.search-box {
+    align-items: flex-start;
 }
 
 ul {
     list-style: none;
 }
 
-div.search-box {
-   flex-direction: column; 
+div.search-box li{
+    margin: 10px 0;
 }
 
-div.search-box li{
-    padding: 5px 0;
+.article-category {
+    width: 100%;
+    padding: 0 10px;
 }
 
 
