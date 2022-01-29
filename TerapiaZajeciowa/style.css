@@ -379,37 +379,67 @@ div.search-box li {
     padding: 0 10px;
 }
 
-.contact-background {
+.contact {
     display: flex;
     width: 100%;
-    /* background: seagreen; */
+    flex-wrap: wrap;
 }
 
-.contact-background,
-.contact-left-background {
-    height: 700px;
-}
-
-.contact-left-background {
-    width: 50%;
-    /* background: rgb(231, 228, 17); */
+.contact-info  {
+    padding: 10px 10px;
+    display: inline;
+    flex-basis: 35%;
+    min-width: 350px;
 }
 
 .contact-form {
-    position: absolute;
-    width: 950px;
-    height: 500px;
-    margin: 100px 0 100px 300px;
-    background: rgba(255, 255, 255, 1);
-    z-index: 2;
-    box-shadow: 0 0 10px grey;
+    flex-basis: 65%;
+    min-width: 350px;
 }
 
-.contact-info {
-    position: absolute;
-    width: 300px;
-    height: 400px;
-    margin: 50px -50px;
-    background: seagreen;
-    box-shadow: 0 0 5px grey;
+.input-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
+
+input, textarea, button {
+    font-size: 25px;
+    border: 2px solid #000;
+}
+
+input, 
+textarea
+ {
+    margin: 10px 5px 40px 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+label {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 10px 5px;
+    cursor: text;
+    transition: 0.2s;
+}
+
+button {
+    padding: 10px 0px;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    font-size: 20px;
+    transform: translateY(-35px);
+}
+
+
