@@ -47,19 +47,13 @@ navLink.forEach(element => {
 
 
 function checkValid(){
-    const input = document.getElementById("email").value;
+    const input = document.querySelector("#email").value;
     
-        if (input.trim() == '') {
-          document.getElementById('emailText').style.fontSize = ''; //setting to default value
-          document.getElementById('emailText').style.opacity = '';
-          document.getElementById('emailText').style.transform = '';
-          //Empty so change it back
-        } else {
-          document.getElementById('emailText').style.fontSize = '20px';
-          document.getElementById('emailText').style.opacity = '1';
-          document.getElementById('emailText').style.transform = 'translateY(-35px)';
-          //Not empty, so change the css.
-        }
+        if (!input.trim() == '') {
+            document.querySelector('#emailText').style.fontSize = '20px';
+            document.querySelector('#emailText').style.transform = 'translateY(-27px)';
+            document.querySelector('#label-icon').style.maxWidth = '18px';
+        } 
     }
 
     

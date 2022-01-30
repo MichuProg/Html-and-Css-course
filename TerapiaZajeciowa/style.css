@@ -411,7 +411,7 @@ input, textarea, button {
 input, 
 textarea
  {
-    margin: 10px 5px 40px 5px;
+    margin: 10px 5px 45px 5px;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -421,7 +421,7 @@ label {
     position: absolute;
     top: 0px;
     left: 0px;
-    padding: 10px 5px;
+    padding: 8px 5px;
     cursor: text;
     transition: 0.2s;
 }
@@ -439,7 +439,17 @@ input:valid~label,
 textarea:focus~label,
 textarea:valid~label {
     font-size: 20px;
-    transform: translateY(-35px);
+    transform: translateY(-27px);
 }
 
+.label-icon {
+    max-width: 20px;
+    transition: 0.2s;
+}
+
+input:focus~label .label-icon,
+input:valid~label .label-icon,
+input:focus~p {
+    max-width: 18px;
+}
 
