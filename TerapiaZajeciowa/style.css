@@ -386,14 +386,19 @@ div.search-box li {
 }
 
 .contact-info  {
-    padding: 10px 10px;
+    padding: 10px 5px;
     display: inline;
-    flex-basis: 35%;
-    min-width: 350px;
+    flex-basis: 45%;
+    min-width: 378px;
+    font-size: 24px;
+}
+
+.contact-info li {
+    padding: 0 0 25px 0;
 }
 
 .contact-form {
-    flex-basis: 65%;
+    flex-basis: 55%;
     min-width: 350px;
 }
 
@@ -453,3 +458,6 @@ input:focus~p {
     max-width: 18px;
 }
 
+.circle {
+    border-radius: 50%;
+}
