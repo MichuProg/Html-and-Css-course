@@ -383,6 +383,7 @@ div.search-box li {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    padding: 10px 0;
 }
 
 .contact-info  {
@@ -398,6 +399,7 @@ div.search-box li {
 }
 
 .contact-form {
+    padding: 4px 0;
     flex-basis: 55%;
     min-width: 350px;
 }
@@ -422,6 +424,10 @@ textarea
     border-right: none;
 }
 
+textarea {
+    resize: none;
+ }
+
 label {
     position: absolute;
     top: 0px;
@@ -437,6 +443,8 @@ button {
     width: 100%;
     cursor: pointer;
     border-radius: 5px;
+    background: #000;
+    color: #fff;
 }
 
 input:focus~label,
