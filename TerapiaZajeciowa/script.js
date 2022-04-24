@@ -44,3 +44,16 @@ navLink.forEach(element => {
         // }
     })
 });
+
+
+function checkValid(){
+    const input = document.querySelector("#email").value;
+    
+        if (!input.trim() == '') {
+            document.querySelector('#emailText').style.fontSize = '20px';
+            document.querySelector('#emailText').style.transform = 'translateY(-27px)';
+            document.querySelector('#label-icon').style.maxWidth = '18px';
+        } 
+    }
+
+    

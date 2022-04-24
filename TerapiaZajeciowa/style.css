@@ -340,6 +340,7 @@ div.right-column {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding: 0 0 10px 0;
 }
 
 div.right-column div.facebook-box,
@@ -366,12 +367,12 @@ div.search-box {
     align-items: flex-start;
 }
 
-ul {
-    list-style: none;
-}
-
 div.search-box li {
     margin: 10px 0;
+}
+
+ul {
+    list-style: none;
 }
 
 .article-category {
@@ -379,37 +380,111 @@ div.search-box li {
     padding: 0 10px;
 }
 
-.contact-background {
+.contact {
     display: flex;
     width: 100%;
-    /* background: seagreen; */
+    flex-wrap: wrap;
+    padding: 10px 0;
 }
 
-.contact-background,
-.contact-left-background {
-    height: 700px;
+.contact-info  {
+    padding: 10px 5px;
+    display: inline;
+    flex-basis: 45%;
+    min-width: 378px;
+    font-size: 24px;
 }
 
-.contact-left-background {
-    width: 50%;
-    /* background: rgb(231, 228, 17); */
+.contact-info li {
+    padding: 0 0 25px 0;
 }
 
 .contact-form {
-    position: absolute;
-    width: 950px;
-    height: 500px;
-    margin: 100px 0 100px 300px;
-    background: rgba(255, 255, 255, 1);
-    z-index: 2;
-    box-shadow: 0 0 10px grey;
+    padding: 4px 0;
+    flex-basis: 55%;
+    min-width: 350px;
 }
 
-.contact-info {
+.input-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+input, textarea, button, .button {
+    font-size: 25px;
+    border: 2px solid #000;
+}
+
+input, 
+textarea
+ {
+    margin: 10px 5px 45px 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+textarea {
+    resize: none;
+ }
+
+label {
     position: absolute;
-    width: 300px;
-    height: 400px;
-    margin: 50px -50px;
-    background: seagreen;
-    box-shadow: 0 0 5px grey;
+    top: 0px;
+    left: 0px;
+    padding: 8px 5px;
+    cursor: text;
+    transition: 0.2s;
+}
+
+button {
+    padding: 10px 0px;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #000;
+    color: #fff;
+}
+
+.button {
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+.button:hover {
+    color: #fff;
+    font-size: 110%;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    font-size: 20px;
+    transform: translateY(-27px);
+}
+
+.label-icon {
+    max-width: 20px;
+    transition: 0.2s;
+}
+
+input:focus~label .label-icon,
+input:valid~label .label-icon,
+input:focus~p {
+    max-width: 18px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+#email-send {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }

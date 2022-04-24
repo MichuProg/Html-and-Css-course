@@ -30,13 +30,13 @@
                         <li><a href="#" class="nav-link sub-link" id="blue">INNE</a></li>
                     </ul>
                 </li>
-                <li><a href="portfolio.html" class="nav-link" id="green">PORTFOLIO</a>
             </ul>
             <ul class="center-menu">
                 <li class="logo"><a href="index.html"><img class="logo-rainbow" src="images/logotyp.png"
                             alt="Logo terapia zajęciowa"></a></li>
             </ul>
             <ul class="right-menu">
+                <li><a href="portfolio.html" class="nav-link" id="green">PORTFOLIO</a></li>
                 <li><a href="services.html" class="nav-link" id="yellow">USŁUGI</a></li>
                 <li><a href="contact.html" class="nav-link active" id="black">KONTAKT</a></li>
                 <!-- <li class="social-media">
@@ -69,13 +69,45 @@
                     <p>Miłego dnia! ;)</p>
                 </span>
             </div>
+            <section class="contact">
+                <div class="contact-info">
+                    <address>
+                        <ul>
+                            <li>
+                                <h1>Aleksandra Wosik</h1>
+                            </li>
+                            <li><img class="address-icon circle" src="images/iconmonstr-email-13-24.png" alt="">
+                                <a href="mailto:aleksandra.wosik.tz@gmail.com"> aleksandra.wosik.tz@gmail.com</a></li>
+                            <li><img class="address-icon circle" src="images/iconmonstr-phone-9-24.png" alt=""><a href="tel:609530502"> 609 530 502</a></li>
+                            <li><img class="address-icon circle" src="images/iconmonstr-location-1-24.png" alt=""> Grabiszyńka 24, 59-500 Wrocław</li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="contact-form">
+                    <form action="https://formsubmit.co/xivulaxi@maildim.com" method="POST">
+                        <input type="hidden" name="_next" value="https://miachal-dziedzic.netlify.app/thanks.html">
+                        <div class="input-box">
+                            <input type="text" name="text" id="name" required>
+                            <label for="name"><img class="label-icon" src="images/iconmonstr-user-20-24.png"> Podaj
+                                imię:</label>
+                        </div>
+                        <div class="input-box">
+                            <input onchange='checkValid()' type="email" name="email" id="email" required>
+                            <label for="email" id="emailText"><img class="label-icon" id="label-icon"
+                                    src="images/iconmonstr-email-10-24.png"> Wpisz email:</label>
+                        </div>
+                        <div class="input-box">
+                            <textarea name="textarea" id="message" rows="8" required></textarea>
+                            <label for="message"><img class="label-icon" src="images/iconmonstr-pencil-10-24.png"> Wpisz
+                                wiadomość:</label>
+                        </div>
+                        <div>
+                            <button type="submit">WYŚLIJ</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </section>
-        <section class="contact-background">
-            <div class="contact-left-background"></div>
-            <div class="contact-form">
-                <div class="contact-info"></div>
-            </div>
-        </section>
-        </main>
-        <script src="script.js"></script>
+    </main>
+    <script src="script.js"></script>
 </body>
